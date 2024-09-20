@@ -12,13 +12,19 @@ namespace Systems.Controls.Player
         private Vector3 _moveDirection;
         private PlayerSettings _playerSettings;
 
-        void Start()
+        private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
+            _playerSettings = gameObject.GetComponentInParent<PlayerSettings>();
+        }
+
+        void Start()
+        {
             _rb.freezeRotation = true;
             _rb.useGravity = false;
-            
-            _playerSettings = gameObject.GetComponentInParent<PlayerSettings>();
+
+            var startingArea = _playerSettings.StartingArea;
+            transform.position = startingArea != null ? startingArea.position : transform.position;
         }
         
         void Update()

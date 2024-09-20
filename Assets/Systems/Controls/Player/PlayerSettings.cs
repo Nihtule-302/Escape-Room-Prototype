@@ -7,5 +7,8 @@ namespace Systems.Controls.Player
     {
         [SerializeField] private PlayerControlsSettings controls;
         public PlayerControlsSettings Controls => controls;
+
+        [SerializeField] private Transform startingArea;
+        public Transform StartingArea => startingArea;
     }
 }
