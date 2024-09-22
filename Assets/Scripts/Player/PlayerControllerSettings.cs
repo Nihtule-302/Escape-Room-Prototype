@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace Systems.Player
+namespace Player
 {
-    [CreateAssetMenu(fileName = "PlayerControlsSettings", menuName = "Settings/Player Controls Settings")]
-    public class PlayerControlsSettings : ScriptableObject
+    [CreateAssetMenu(fileName = "PlayerControllerSettings", menuName = "Settings/Player Controller Settings")]
+    public class PlayerControllerSettings : ScriptableObject
     {
         [Header("Mouse Sensitivity")]
         public  float horizontalSensitivity = 1;

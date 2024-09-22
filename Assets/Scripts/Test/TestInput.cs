@@ -9,19 +9,11 @@ namespace Systems.Test
         [SerializeField] GameEvent removeItemEvent;
         [SerializeField] GameEvent addItemEvent;
         
-
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                removeItemEvent?.NotifySubscribers();
-            }
-
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                addItemEvent?.NotifySubscribers();
-            }
+            if (Input.GetKeyDown(KeyCode.P)) removeItemEvent?.NotifySubscribers();
+            if (Input.GetKeyDown(KeyCode.O)) addItemEvent?.NotifySubscribers();
         }
     }
 }

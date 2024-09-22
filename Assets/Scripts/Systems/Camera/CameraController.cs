@@ -1,8 +1,9 @@
+using Player;
 using UnityEngine;
 
 namespace Systems.Player
 {
-    public class CameraControls : MonoBehaviour
+    public class CameraController : MonoBehaviour
     {
         private float _xAxisRotation;
         private float _yAxisRotation;
@@ -40,8 +41,8 @@ namespace Systems.Player
 
         private void ProcessInput()
         {
-            var verticalSensitivity = _playerSettings.Controls.verticalSensitivity;
-            var horizontalSensitivity = _playerSettings.Controls.horizontalSensitivity;
+            var verticalSensitivity = _playerSettings.Controller.verticalSensitivity;
+            var horizontalSensitivity = _playerSettings.Controller.horizontalSensitivity;
             
             _xAxisRotation -= Input.GetAxis("Mouse Y") * verticalSensitivity;
             _yAxisRotation += Input.GetAxis("Mouse X") * horizontalSensitivity;
