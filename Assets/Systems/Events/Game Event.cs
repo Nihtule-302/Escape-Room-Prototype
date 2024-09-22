@@ -3,13 +3,14 @@ using UnityEngine;
 
 namespace Systems.Events
 {
+    [CreateAssetMenu(fileName = "New Game Event", menuName = "Game Event")]
     public class GameEvent : ScriptableObject
     {
-        private List<GameEventListener> _listeners = new List<GameEventListener>() ;
+        [SerializeField] private List<GameEventListener> listeners = new List<GameEventListener>() ;
 
         public void NotifySubscribers()
         {
-            foreach (var listener in _listeners)
+            foreach (var listener in listeners)
             {
                 listener.OnEventNotification();
             }
@@ -17,12 +18,18 @@ namespace Systems.Events
 
         public void SubscribeListener(GameEventListener listener)
         {
-            _listeners.Add(listener);
+            if (!listeners.Contains(listener))
+            {
+                listeners.Add(listener);
+            }
         }
 
         public void UnSubscribeListener(GameEventListener listener)
         {
-            _listeners.Remove(listener);
+            if (listeners.Contains(listener))
+            {
+                listeners.Remove(listener);
+            }
         }
     }
 }
