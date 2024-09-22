@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Systems.Controls.Player
+namespace Systems.Player
 {
     public class Movement : MonoBehaviour
     {

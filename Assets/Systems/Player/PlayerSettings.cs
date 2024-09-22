@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Systems.Controls.Player
+namespace Systems.Player
 {
     public class PlayerSettings: MonoBehaviour
     {
