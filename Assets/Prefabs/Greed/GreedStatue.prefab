@@ -92,14 +92,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2866990461760150337}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.6763821, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3064001599431242679}
   m_Father: {fileID: 1178758429856443368}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8979397926589684119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,11 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7679365b8c3601a4692c5ff1428676fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels:
-  - {fileID: 7052403473925699048}
-  - {fileID: 3359654465482019473}
-  - {fileID: 8307739241769481859}
-  currentLevel: 0
+  heights: []
   speed: 0.25
 --- !u!114 &4537918290762253660
 MonoBehaviour:
@@ -439,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1178758429856443368}
   m_Layer: 0
-  m_Name: Greed Statue
+  m_Name: GreedStatue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,7 +449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9067637213530823497}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -2.034, y: 0, z: 2.323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -461,4 +457,4 @@ Transform:
   - {fileID: 4747945937198558227}
   - {fileID: 388833175057827017}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

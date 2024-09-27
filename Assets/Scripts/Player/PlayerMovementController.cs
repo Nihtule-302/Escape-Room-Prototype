@@ -1,4 +1,4 @@
-using Systems.Input_Handling;
+using Input_Handling;
 using UnityEngine;
 
 namespace Player
@@ -6,8 +6,6 @@ namespace Player
     public class PlayerMovementController : MonoBehaviour
     {
         private Rigidbody _rb;
-        private float _horizontalInput;
-        private float _verticalInput;
         private Vector3 _moveDirection;
         private PlayerSettings _playerSettings;
         private IInputHandler _inputHandler;
@@ -16,6 +14,7 @@ namespace Player
         {
             _rb = GetComponent<Rigidbody>();
             _playerSettings = GetComponentInParent<PlayerSettings>();
+            _inputHandler = new PlayerInputService();
         }
 
         private void Start()
@@ -41,14 +40,16 @@ namespace Player
 
         private void FixedUpdate()
         {
-            var input = _inputHandler.GetInput();
             MovePlayer();
         }
 
         private void MovePlayer()
         {
+            var horizontalInput = _inputHandler.GetInput().x;
+            var verticalInput = _inputHandler.GetInput().z;
+            
             _rb.drag = _playerSettings.Controller.drag;
-            _moveDirection = _horizontalInput * transform.right + _verticalInput * transform.forward;
+            _moveDirection = horizontalInput * transform.right + verticalInput * transform.forward;
             _rb.AddForce(_moveDirection.normalized * _playerSettings.Controller.movementSpeed, ForceMode.Force);
         }
     }

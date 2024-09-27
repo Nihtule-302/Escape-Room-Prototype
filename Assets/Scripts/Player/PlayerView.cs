@@ -1,31 +1,24 @@
-using Player;
 using UnityEngine;
 
-namespace Systems.Player
+namespace Player
 {
-    public class CameraController : MonoBehaviour
+    public class PlayerView : MonoBehaviour
     {
         private float _xAxisRotation;
         private float _yAxisRotation;
         
-        [SerializeField] private Transform cameraPosition;
-        [SerializeField] private Transform playerTransform;
-        
+        private Transform _playerTransform;
         private PlayerSettings _playerSettings;
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
+            _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            _playerSettings = _playerTransform.GetComponent<PlayerSettings>();
+            
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            
-            transform.position = cameraPosition.position;
-            transform.parent = cameraPosition;    
-            
-            _playerSettings = playerTransform.GetComponent<PlayerSettings>();
         }
-
-        // Update is called once per frame
+        
         void Update()
         {
             HandleRotation();
@@ -36,7 +29,7 @@ namespace Systems.Player
             ProcessInput();
             
             transform.rotation = Quaternion.Euler(_xAxisRotation, _yAxisRotation, 0f);
-            playerTransform.rotation = Quaternion.Euler(0f, _yAxisRotation, 0f);
+            _playerTransform.rotation = Quaternion.Euler(0f, _yAxisRotation, 0f);
         }
 
         private void ProcessInput()

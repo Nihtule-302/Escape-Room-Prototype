@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using Systems.GreedStatues;
 using UnityEngine;
 
-namespace Systems.GreedStatues
+namespace GreedStatues
 {
     public class GreedStatueHeightController : MonoBehaviour
     {

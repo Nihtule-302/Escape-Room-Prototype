@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Systems.Input_Handling
+namespace Input_Handling
 {
     public interface IInputHandler
     {
