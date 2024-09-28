@@ -1,15 +1,10 @@
 using Interfaces;
 
-namespace Systems.GreedStatues
+namespace GreedStatues
 {
-    public class GreedStatue: IInteractable, IMovable 
+    public class GreedStatue: IInteractable 
     {
         public void Interact()
-        {
-            
-        }
-
-        public void Move()
         {
             
         }

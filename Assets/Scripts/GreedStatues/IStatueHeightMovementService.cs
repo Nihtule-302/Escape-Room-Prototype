@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Systems.GreedStatues
+namespace GreedStatues
 {
     public interface IStatueHeightMovementService
     {

@@ -1,4 +1,6 @@
+using System.Input;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -8,12 +10,16 @@ namespace Player
         private float _yAxisRotation;
         
         private Transform _playerTransform;
-        private PlayerSettings _playerSettings;
+        
+        [Header("Inputs")]
+        [SerializeField] private InputActionReference look;
+
+        [SerializeField]private float verticalSensitivity = 1;
+        [SerializeField]private float horizontalSensitivity = 1;
 
         private void Awake()
         {
             _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-            _playerSettings = _playerTransform.GetComponent<PlayerSettings>();
             
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -34,13 +40,12 @@ namespace Player
 
         private void ProcessInput()
         {
-            var verticalSensitivity = _playerSettings.Controller.verticalSensitivity;
-            var horizontalSensitivity = _playerSettings.Controller.horizontalSensitivity;
+            var input = InputManager.GetLookInput();
             
-            _xAxisRotation -= Input.GetAxis("Mouse Y") * verticalSensitivity;
-            _yAxisRotation += Input.GetAxis("Mouse X") * horizontalSensitivity;
-
+            _xAxisRotation -= input.y * verticalSensitivity;
+            _yAxisRotation += input.x * horizontalSensitivity;
+            
             _xAxisRotation = Mathf.Clamp(_xAxisRotation, -85f, 75f);
         }
     }
-}
+}   
