@@ -7,8 +7,6 @@ namespace Player
     {
         private Rigidbody _rb;
 
-        private Vector3 _playerVelocity;
-
         [Header("Movement Settings")]
         [SerializeField] private float speed = 5f;
 
@@ -36,7 +34,6 @@ namespace Player
         private void MovePlayer()
         {
             var input = InputManager.GetMovementInput();
-            Debug.Log(input);
             var movementDirection = input.x * transform.right + input.y * transform.forward;
             _rb.AddForce(movementDirection * speed);
         }
