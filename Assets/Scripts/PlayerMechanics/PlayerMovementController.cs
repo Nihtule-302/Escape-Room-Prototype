@@ -1,7 +1,7 @@
 using System.Input;
 using UnityEngine;
 
-namespace Player
+namespace PlayerMechanics
 {
     public class PlayerMovementController : MonoBehaviour
     {

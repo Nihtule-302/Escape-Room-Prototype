@@ -1,9 +1,9 @@
 using System;
 using System.Input;
-using Interfaces;
+using CoreSystems.Interfaces;
 using UnityEngine;
 
-namespace Player
+namespace PlayerMechanics
 {
     public class PlayerInteractionController:MonoBehaviour
     {

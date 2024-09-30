@@ -1,5 +1,5 @@
 using System.Input;
-using Interfaces;
+using CoreSystems.Interfaces;
 using UnityEngine;
 
 namespace GreedStatues

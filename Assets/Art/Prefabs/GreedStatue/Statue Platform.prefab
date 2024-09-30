@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
-  oneSlotInventory: {fileID: 0}
   itemType: 3
 --- !u!1 &1202731533271246444
 GameObject:
@@ -73,13 +72,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202731533271246444}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.08290295, y: 0.00044043234, z: 0.10187952, w: 0.9913362}
-  m_LocalPosition: {x: 0.27200007, y: 0.88199997, z: -0.036000013}
+  m_LocalRotation: {x: -0.15081215, y: -0.0065597584, z: 0.10166909, w: 0.9832986}
+  m_LocalPosition: {x: 0.272, y: 0.883, z: -0.031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3642135412427941514}
-  m_LocalEulerAnglesHint: {x: -9.466, y: -0.931, z: 11.812}
+  m_LocalEulerAnglesHint: {x: -17.173, y: -2.614, z: 12.201}
 --- !u!65 &509388143577271065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114,7 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
-  oneSlotInventory: {fileID: 0}
   itemType: 0
 --- !u!1 &1247411541653534254
 GameObject:
@@ -175,7 +173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4837037541380128761}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.034, y: 0, z: 3.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -278,7 +276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
-  oneSlotInventory: {fileID: 0}
   itemType: 1
 --- !u!1 &5364132876839747834
 GameObject:
@@ -306,13 +303,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5364132876839747834}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.080370985, y: -0.020337101, z: -0.14965317, w: 0.9852568}
-  m_LocalPosition: {x: -0.27900004, y: 0.88199997, z: -0.036000013}
+  m_LocalRotation: {x: -0.1492408, y: -0.009796226, z: -0.15071066, w: 0.9771989}
+  m_LocalPosition: {x: -0.266, y: 0.88, z: -0.028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3642135412427941514}
-  m_LocalEulerAnglesHint: {x: -9.466, y: -0.931, z: -17.197}
+  m_LocalEulerAnglesHint: {x: -17.135, y: 1.549, z: -17.768}
 --- !u!65 &2890598014663631549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -347,7 +344,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
-  oneSlotInventory: {fileID: 0}
   itemType: 0
 --- !u!1 &5644113231882797283
 GameObject:
@@ -687,7 +683,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
-  oneSlotInventory: {fileID: 0}
   itemType: 2
 --- !u!1 &8406154827328259283
 GameObject:

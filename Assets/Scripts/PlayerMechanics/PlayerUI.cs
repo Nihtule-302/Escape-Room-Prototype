@@ -1,8 +1,7 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Player
+namespace PlayerMechanics
 {
     public class PlayerUI:MonoBehaviour
     {
