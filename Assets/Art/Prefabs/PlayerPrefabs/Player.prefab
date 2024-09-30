@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalSensitivity: 0.05
-  horizontalSensitivity: 0.1
+  horizontalSensitivity: 0.05
 --- !u!1 &7168667441854553291
 GameObject:
   m_ObjectHideFlags: 0

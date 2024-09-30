@@ -1,10 +1,9 @@
-using System;
 using Interfaces;
 using UnityEngine;
 
-namespace Inventory
+namespace InventorySystem.Containers
 {
-    public abstract class ItemHolder : MonoBehaviour, IInteractable, IItemHolder
+    public abstract class ItemContainers : MonoBehaviour, IInteractable, IItemHolder
     {
         [SerializeField] private Item storedItem;
         [SerializeField] private OneSlotInventory oneSlotInventory;

@@ -1,6 +1,6 @@
-namespace Inventory
+namespace InventorySystem.Containers
 {
-    public class CrownHolder : ItemHolder
+    public class CrownContainers : ItemContainers
     {
         protected override ItemType RequiredItemType => ItemType.Crown;
     }

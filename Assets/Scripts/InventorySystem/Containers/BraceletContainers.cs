@@ -1,6 +1,6 @@
-namespace Inventory
+namespace InventorySystem.Containers
 {
-    public class BraceletHolder : ItemHolder
+    public class BraceletContainers : ItemContainers
     {
         protected override ItemType RequiredItemType => ItemType.Bracelet;
     }

@@ -1,6 +1,6 @@
-namespace Inventory
+namespace InventorySystem.Containers
 {
-    public class StatueHandleHolder : ItemHolder
+    public class StatueHandleContainers : ItemContainers
     {
         protected override ItemType RequiredItemType => ItemType.StatueHandle;
     }

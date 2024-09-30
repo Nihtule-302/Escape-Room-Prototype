@@ -1,8 +1,7 @@
 using Interfaces;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Inventory
+namespace InventorySystem
 {
     [CreateAssetMenu(menuName = "Inventory", fileName = "New Inventory")]
     public class OneSlotInventory: ScriptableObject, IItemHolder
