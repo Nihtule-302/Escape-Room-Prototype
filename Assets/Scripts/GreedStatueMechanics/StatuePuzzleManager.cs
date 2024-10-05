@@ -1,6 +1,8 @@
 using System.Linq;
+using CoreSystems.Events;
 using UnityEngine;
 using InventorySystem.Collections;
+using UnityEngine.Serialization;
 
 namespace GreedStatueMechanics
 {
@@ -9,10 +11,12 @@ namespace GreedStatueMechanics
         public static StatuePuzzleManager Instance { get; private set; }
         
         [SerializeField] private ItemCollection[] targetStatueOrder;
-
         [SerializeField] private ItemCollection[] currentStatueOrder;
 
         [SerializeField] private PuzzleTrigger[] puzzleTriggers;
+        
+        [SerializeField] private GameEvent winEvent;
+        
         
         private void Awake()
         {
@@ -44,6 +48,7 @@ namespace GreedStatueMechanics
         private void ExecuteWinSequence()
         {
             Debug.Log("Win");
+            winEvent.NotifySubscribers();
         }
 
         private bool AreEquippedItemsValidForAllStatues()

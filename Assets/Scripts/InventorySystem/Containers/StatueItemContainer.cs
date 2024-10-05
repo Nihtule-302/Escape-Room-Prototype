@@ -10,7 +10,7 @@ namespace InventorySystem.Containers
         public override void Interact()
         {
             base.Interact();
-            onStatueStateChanged.NotifySubscribers();
+            onStatueStateChanged?.NotifySubscribers();
         }
     }
 }
