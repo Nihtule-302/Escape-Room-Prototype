@@ -1,4 +1,4 @@
-using System.Input;
+using CoreSystems.InputHandling;
 using UnityEngine;
 
 namespace PlayerMechanics

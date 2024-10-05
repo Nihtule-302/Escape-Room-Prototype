@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8371958221066847686}
   - component: {fileID: 5696524340320419479}
   m_Layer: 6
-  m_Name: Gold Bracelet
+  m_Name: Red Bracelet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ce9e28a65ddd154cb4a20c2693dec40, type: 2}
+  - {fileID: 2100000, guid: 1bdf9ad1151bfad4781c98e343c0d335, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,4 +121,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 0
+  collection: {fileID: 11400000, guid: 7ae83c8775d932646bd5d851348e949a, type: 2}
   isPickedUp: 0

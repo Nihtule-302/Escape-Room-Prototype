@@ -8,8 +8,7 @@ namespace InventorySystem.Containers
         [SerializeField] private Item storedItem;
         
         public ItemType itemType;
-        protected ItemType RequiredItemType => itemType;
-        
+        private ItemType RequiredItemType => itemType;
         public bool IsEmpty => storedItem == null;
 
         public Item StoredItem
@@ -20,36 +19,56 @@ namespace InventorySystem.Containers
         
         private void Awake()
         {
-            var item = GetComponentInChildren<Item>();
-            if (item == null) return;
-            
-            storedItem = item;
-            InitializeStoredItem();
+            InitializeItem();
         }
         
+        #region Private Methods
+        private void InitializeItem()
+        {
+            // If an item is already stored, initialize it
+            if (storedItem != null)
+            {
+                InitializeStoredItem();
+                return;
+            }
+
+            // Try to get an Item component from the child
+            var item = GetComponentInChildren<Item>();
+            if (item != null)
+            {
+                storedItem = item;
+                InitializeStoredItem();
+            }
+        }
+
+        [ContextMenu("Initialize Stored Item")]
         private void InitializeStoredItem()
         {
             storedItem.transform.position = transform.position;
-            storedItem.transform.localRotation = transform.rotation;
+            storedItem.transform.rotation = transform.rotation;
             storedItem.transform.parent = transform;
-            
             GetComponent<Collider>().enabled = false;
         }
+        #endregion
 
-        
+        #region Public Methods (IInteractable Implementation)
         public string GetMessage()
         {
-            if (PlayerInventory.Instance.GetHeldItem() == null) return string.Empty;
-            if (PlayerInventory.Instance.GetHeldItem().itemType != RequiredItemType) return string.Empty;
-            return "Place " + PlayerInventory.Instance.GetHeldItem().name;
+            var heldItem = PlayerInventory.Instance.GetHeldItem();
+            if (heldItem == null || heldItem.itemType != RequiredItemType) 
+                return string.Empty;
+
+            return "Place " + heldItem.name;
         }
 
-        public void Interact()
+        public virtual void Interact()
         {
-            if (PlayerInventory.Instance.GetHeldItem() == null) return;
-            if (PlayerInventory.Instance.GetHeldItem().itemType != RequiredItemType) return;
-            PlayerInventory.Instance.PlaceItemIn(this); 
-        }
+            var heldItem = PlayerInventory.Instance.GetHeldItem();
+            if (heldItem == null || heldItem.itemType != RequiredItemType) 
+                return;
 
+            PlayerInventory.Instance.PlaceItemIn(this);
+        }
+        #endregion
     }
 }

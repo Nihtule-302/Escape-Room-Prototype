@@ -1,16 +1,16 @@
-using System.Input;
+using CoreSystems.InputHandling;
 using CoreSystems.Interfaces;
 using UnityEngine;
 
-namespace GreedStatues
+namespace GreedStatueMechanics
 {
     public class StatueMovementController: MonoBehaviour ,IInteractable 
     {
         [SerializeField] private StatueMovementMessageState message;
 
-        [SerializeField] private bool canMove = false;
+        [SerializeField] private bool canMove;
         private Rigidbody _rb;
-        private Transform player;
+        private Transform _player;
         
         [Header("Movement Settings")]
         [SerializeField] private float speed = 5f;
@@ -19,7 +19,7 @@ namespace GreedStatues
         {
             message = StatueMovementMessageState.Move;
             _rb = GetComponentInParent<Rigidbody>();
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            _player = GameObject.FindGameObjectWithTag("Player").transform;
         }
         
 

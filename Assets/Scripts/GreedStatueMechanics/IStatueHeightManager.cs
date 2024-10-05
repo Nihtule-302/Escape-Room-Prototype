@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GreedStatues
+namespace GreedStatueMechanics
 {
     public interface IStatueHeightManager
     {

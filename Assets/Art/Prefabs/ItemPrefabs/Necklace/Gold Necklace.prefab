@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &821123977210456107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 27901944235395410, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: collection
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fce0ff9724553f428aedb8248b52ca1, type: 2}
+    - target: {fileID: 916154128113426105, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5da5be137d2b5b747b11c42e239fa072, type: 2}
+    - target: {fileID: 1131450575974278082, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ce9e28a65ddd154cb4a20c2693dec40, type: 2}
+    - target: {fileID: 2434666751195837519, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5da5be137d2b5b747b11c42e239fa072, type: 2}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675393329406944812, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234965372417668192, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1bdf9ad1151bfad4781c98e343c0d335, type: 2}
+    - target: {fileID: 4541871693180779943, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Name
+      value: Gold Necklace
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656053791701843550, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1bdf9ad1151bfad4781c98e343c0d335, type: 2}
+    - target: {fileID: 4870868808078803749, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1bdf9ad1151bfad4781c98e343c0d335, type: 2}
+    - target: {fileID: 5496737601525868981, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: collection
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ae83c8775d932646bd5d851348e949a, type: 2}
+    - target: {fileID: 6975955768720626823, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5da5be137d2b5b747b11c42e239fa072, type: 2}
+    - target: {fileID: 7918130310115595432, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1bdf9ad1151bfad4781c98e343c0d335, type: 2}
+    - target: {fileID: 8299163449959374144, guid: a580276ca3db94c44baddc5021152e10, type: 3}
+      propertyPath: m_Name
+      value: Red Necklace
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a580276ca3db94c44baddc5021152e10, type: 3}

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
   itemType: 3
+  onStatueStateChanged: {fileID: 0}
 --- !u!1 &1202731533271246444
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
   itemType: 0
+  onStatueStateChanged: {fileID: 11400000, guid: b546065fad19cdc4e836463c06b3c8b0, type: 2}
 --- !u!1 &1247411541653534254
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,9 +160,11 @@ GameObject:
   m_Component:
   - component: {fileID: 328194947092400596}
   - component: {fileID: 72670830096139602}
+  - component: {fileID: 4869055120888359909}
+  - component: {fileID: 9069537454996284103}
   m_Layer: 0
   m_Name: Statue Platform
-  m_TagString: Untagged
+  m_TagString: Statue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +213,55 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &4869055120888359909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4837037541380128761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b022c7cdb64a046b1bb1eb4d8ddf2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statuePrefab: {fileID: 5644113231882797283}
+  acceptedCollection: {fileID: 0}
+  statueItemContainers:
+    crownContainer: {fileID: 776950608467499420}
+    necklaceContainer: {fileID: 2440942457873248330}
+    leftBraceletContainer: {fileID: 2281553286605877386}
+    rightBraceletContainer: {fileID: 1114828507661024085}
+    handleContainer: {fileID: 0}
+  equippedItems:
+    crown: {fileID: 0}
+    necklace: {fileID: 0}
+    leftBracelet: {fileID: 0}
+    rightBracelet: {fileID: 0}
+    handle: {fileID: 0}
+--- !u!136 &9069537454996284103
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4837037541380128761}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.26
+  m_Height: 1.43
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0.59, z: -0.00000008940697}
 --- !u!1 &4899719604581069709
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,13 +288,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4899719604581069709}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23391609, y: -0, z: -0, w: 0.9722568}
-  m_LocalPosition: {x: 0, y: 1.2909999, z: -0.04399991}
+  m_LocalRotation: {x: 0.22440004, y: -0.6705555, z: -0.22440006, w: 0.6705555}
+  m_LocalPosition: {x: 0, y: 1.303, z: -0.015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3642135412427941514}
-  m_LocalEulerAnglesHint: {x: 27.055, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -37.005}
 --- !u!65 &6373788165281132553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -261,7 +314,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 0.1, z: 0.25}
+  m_Size: {x: 0.21, y: 0.1, z: 0.21}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2440942457873248330
 MonoBehaviour:
@@ -277,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
   itemType: 1
+  onStatueStateChanged: {fileID: 11400000, guid: b546065fad19cdc4e836463c06b3c8b0, type: 2}
 --- !u!1 &5364132876839747834
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
   itemType: 0
+  onStatueStateChanged: {fileID: 11400000, guid: b546065fad19cdc4e836463c06b3c8b0, type: 2}
 --- !u!1 &5644113231882797283
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,13 +697,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8020089307957189283}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.461, z: -0.047}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.511, z: -0.0133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3642135412427941514}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!65 &6168813782187517985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -669,7 +724,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.15, y: 0.15, z: 0.23}
-  m_Center: {x: 0, y: 0.14, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &776950608467499420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storedItem: {fileID: 0}
   itemType: 2
+  onStatueStateChanged: {fileID: 11400000, guid: b546065fad19cdc4e836463c06b3c8b0, type: 2}
 --- !u!1 &8406154827328259283
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +752,7 @@ GameObject:
   - component: {fileID: 8477211461037094931}
   - component: {fileID: 2787897113252239264}
   - component: {fileID: 906267121415120964}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
